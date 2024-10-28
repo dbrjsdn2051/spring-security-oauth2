@@ -1,14 +1,14 @@
 server:
   port: 8081
 
-spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          keycloak:
-            client-id: oauth2-client-app
-            client-secret: j9grHkV7sKiXyr5zV5kksEkwFbGrpk5v
+#spring:
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          keycloak:
+#            client-id: oauth2-client-app
+#            client-secret: j9grHkV7sKiXyr5zV5kksEkwFbGrpk5v
 #            client-name: oauth2-client-app
 #            redirect-uri: http://localhost:8081/login/oauth2/code/keycloak
 #            authorization-grant-type: authorization_code
