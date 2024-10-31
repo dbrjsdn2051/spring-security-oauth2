@@ -8,21 +8,18 @@ spring:
         registration:
           keycloak:
             client-id: oauth2-client-app
-            client-secret: j9grHkV7sKiXyr5zV5kksEkwFbGrpk5v
+            client-secret: Ae5w2kP6Y8SQHl4OMzfd9UfNtQrp7WJ8
             client-name: oauth2-client-app
             redirect-uri: http://localhost:8081/login/oauth2/code/keycloak
             authorization-grant-type: authorization_code
             client-authentication-method: client_secret_basic
-            scope:
-              - openid
-              - email
-              - profile
+            scope: openid, email
 
         provider:
           keycloak:
-            authorization-uri: http://localhost:8080/realms/master/protocol/openid-connect/auth
-            token-uri: http://localhost:8080/realms/master/protocol/openid-connect/token
-            issuer-uri: http://localhost:8080/realms/master
-            user-info-uri: http://localhost:8080/realms/master/protocol/openid-connect/userinfo
-            jwk-set-uri: http://localhost:8080/realms/master/protocol/openid-connect/certs
+            authorization-uri: http://localhost:8080/realms/oauth2/protocol/openid-connect/auth
+            token-uri: http://localhost:8080/realms/oauth2/protocol/openid-connect/token
+            issuer-uri: http://localhost:8080/realms/oauth2
+            user-info-uri: http://localhost:8080/realms/oauth2/protocol/openid-connect/userinfo
+            jwk-set-uri: http://localhost:8080/realms/oauth2/protocol/openid-connect/certs
             user-name-attribute: preferred_username
